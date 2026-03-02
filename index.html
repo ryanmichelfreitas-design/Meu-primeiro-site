@@ -1,11 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>✨ Galeria de Atividades Infantis ✨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f9f3e6 0%, #ffe9c4 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #4a4a4a;
+            text-shadow: 3px 3px 0 #ffd966;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #6b4f3c;
+            margin-top: 0.5rem;
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid white;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+            border-color: #ffb347;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #faf0e6;
+            padding: 1rem;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .image-container img {
+            transform: scale(1.1);
+        }
+
+        .card-footer {
+            background: #ffb347;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo para os placeholders */
+        .placeholder {
+            background: linear-gradient(135deg, #ffdab9, #ffe4b5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #8b5a2b;
+        }
+
+        .placeholder svg {
+            width: 50px;
+            height: 50px;
+            fill: #ff9f4b;
+        }
+
+        .card-count {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff6f61;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .card {
+            position: relative;
+        }
+
+        /* Footer da página */
+        .page-footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #7b5e42;
+            font-size: 1.1rem;
+        }
+
+        .page-footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .page-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    Eu não sei oque estou fazendo! !
+    <div class="header">
+        <h1>🎨 50 ATIVIDADES INFANTIS 🎨</h1>
+        <p>Clique nos cards para ver a magia! ✨</p>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <!-- Os 50 cards serão gerados via JavaScript -->
+    </div>
+
+    <div class="page-footer">
+        🌟 50 espaços para guardar as melhores atividades infantis! 🌟<br>
+        <small>(Passe o mouse para ver a animação)</small>
+    </div>
+
+    <script>
+        // Lista de 50 imagens de atividades infantis (todas do Placekitten - seguro e rápido)
+        // Usei placekitten porque é rápido e sempre carrega, mas você pode substituir pelos links reais
+        const activities = [
+            "Desenho livre", "Pintura com dedos", "Recorte e colagem", "Massinha de modelar",
+            "Leitura de história", "Quebra-cabeça", "Blocos de montar", "Dança das cadeiras",
+            "Caça ao tesouro", "Teatro de fantoches", "Pintura no cavalete", "Jogo da memória",
+            "Brincadeira de roda", "Aprender cores", "Números divertidos", "Alfabeto ilustrado",
+            "Experiência científica", "Plantar uma semente", "Cozinhar com ajuda", "Música e ritmo",
+            "Imitar animais", "Esconde-esconde", "Pega-pega", "Amarelinha", "Pular corda",
+            "Bolinhas de sabão", "Desenho no chão", "Modelar com argila", "Pintura com esponja",
+            "Carimbo com legumes", "Colagem com folhas", "Brinquedos reciclados", "Fantasia de personagem",
+            "Contar estrelas", "Observar nuvens", "Piquenique no parque", "Corrida de saco",
+            "Jogar bola", "Circuito de obstáculos", "Ioga para crianças", "Meditação guiada",
+            "Desenho com giz", "Pintura com gelo", "Slime caseiro", "Areia cinética",
+            "Caixa sensorial", "Brincar com água", "Pescar brinquedos", "Telefone sem fio",
+            "Mímica"
+        ];
+
+        const gallery = document.getElementById('gallery');
+
+        // Gerar 50 cards
+        for (let i = 0; i < 50; i++) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            // Número do card
+            const countSpan = document.createElement('span');
+            countSpan.className = 'card-count';
+            countSpan.textContent = i + 1;
+            
+            // Container da imagem
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'image-container';
+            
+            // Criar a imagem
+            const img = document.createElement('img');
+            
+            // Alternativa: usar imagens diferentes para cada card (placekitten com ids variados)
+            // Escolhi imagens temáticas infantis do PlaceKitten (fofas e seguras)
+            const kittenId = i + 1; // 1 a 50
+            img.src = `https://placekitten.com/300/300?image=${kittenId}`;
+            
+            img.alt = activities[i] || `Atividade infantil ${i + 1}`;
+            img.title = activities[i] || `Atividade ${i + 1}`;
+            
+            // Tratamento de erro - se a imagem não carregar, mostra um placeholder bonitinho
+            img.onerror = function() {
+                this.style.display = 'none';
+                const parent = this.parentNode;
+                const placeholder = document.createElement('div');
+                placeholder.className = 'placeholder';
+                placeholder.innerHTML = `
+                    <svg viewBox="0 0 24 24" width="50" height="50">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                    </svg>
+                    <span>${activities[i] || 'Atividade divertida'}</span>
+                `;
+                parent.appendChild(placeholder);
+            };
+            
+            imgContainer.appendChild(img);
+            
+            // Rodapé com o nome da atividade
+            const footer = document.createElement('div');
+            footer.className = 'card-footer';
+            footer.textContent = activities[i] || `Atividade ${i + 1}`;
+            
+            // Montar o card
+            card.appendChild(countSpan);
+            card.appendChild(imgContainer);
+            card.appendChild(footer);
+            
+            gallery.appendChild(card);
+        }
+
+        // Função adicional para substituir imagens que não carregaram por placeholders
+        // (já temos onerror, mas garantimos que todas as imagens tenham um alt)
+        window.addEventListener('load', function() {
+            const images = document.querySelectorAll('.image-container img');
+            images.forEach(img => {
+                if (!img.complete || img.naturalHeight === 0) {
+                    // Se a imagem não carregou, dispara o onerror manualmente
+                    img.dispatchEvent(new Event('error'));
+                }
+            });
+        });
+    </script>
 </body>
 </html>
