@@ -1,412 +1,628 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Atividades Infantis - 50 Ideias Criativas para Crianças</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>🍎 50 Atividades Infantis | Galeria de Imagens</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
+    body {
+      background: linear-gradient(145deg, #f9f3e6 0%, #fff4e8 100%);
+      font-family: 'Segoe UI', 'Roboto', 'Comic Neue', system-ui, -apple-system, sans-serif;
+      padding: 2rem 1.5rem;
+      color: #2e241f;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 25px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-            padding: 30px 20px 40px 20px;
-        }
+    /* container principal */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 20px;
-            margin: 20px;
-        }
+    /* cabeçalho amigável */
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding: 1rem 0.5rem;
+      border-bottom: 3px dashed #fbcb7b;
+      background: rgba(255, 248, 235, 0.7);
+      border-radius: 48px;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            color: #4a5568;
-            margin-bottom: 10px;
-            display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+    .header h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #f5a65b, #f3c682);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
 
-        .subtitle {
-            color: #718096;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+    .header p {
+      font-size: 1.1rem;
+      color: #5e4b38;
+      background: #fff0e0;
+      display: inline-block;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-        .counter {
-            background: #667eea;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
+    .instrucao {
+      background: #fffaef;
+      border-left: 8px solid #f5a65b;
+      padding: 0.9rem 1.5rem;
+      border-radius: 28px;
+      margin: 1rem 0 2rem 0;
+      font-size: 0.95rem;
+      color: #4a3727;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 20px;
-            margin-top: 20px;
-        }
+    .instrucao code {
+      background: #f1e5d8;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      color: #c25d2e;
+      font-size: 0.9rem;
+    }
 
-        .card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
+    /* grade responsiva para as 50 imagens */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1rem;
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
+    /* card individual */
+    .card {
+      background: #ffffffdd;
+      backdrop-filter: blur(0px);
+      background: #ffffff;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ffddb0;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .card-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 28px -12px rgba(0, 0, 0, 0.2);
+      border-color: #ffbc6e;
+    }
 
-        .card:hover .card-image {
-            transform: scale(1.05);
-        }
+    /* estrutura exata da imagem: src="coloque a link aqui" */
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #f9e6d4;
+      display: block;
+      border-bottom: 2px solid #ffe1b9;
+      transition: opacity 0.2s;
+    }
 
-        .card-content {
-            padding: 15px;
-            background: white;
-        }
+    /* fallback visual para imagens quebradas (sem js) - mantém a estrutura */
+    .card img[src="coloque a link aqui"] {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e2b27a" width="60px" height="60px"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 8h-4v4h-4v-4H6V9h4V5h4v4h4v2z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 64px;
+      background-color: #fff1e2;
+      min-height: 200px;
+    }
 
-        .activity-title {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #2d3748;
-            margin-bottom: 5px;
-        }
+    /* informações do card */
+    .card-info {
+      padding: 1rem 0.9rem 1.2rem;
+      background: #fffef7;
+    }
 
-        .activity-number {
-            color: #667eea;
-            font-size: 0.85em;
-            font-weight: bold;
-        }
+    .card-info h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #d sixteen? #c4622a;
+      color: #bf5e2c;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-        .badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(102, 126, 234, 0.9);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: bold;
-            backdrop-filter: blur(5px);
-            z-index: 2;
-        }
+    .badge-num {
+      background: #ffd6ae;
+      border-radius: 40px;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #a54512;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 2px solid #e2e8f0;
-            color: #718096;
-            font-size: 0.9em;
-        }
+    .src-placeholder {
+      background: #fef3e8;
+      padding: 0.4rem 0.6rem;
+      border-radius: 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem;
+      color: #bd7a44;
+      word-break: break-all;
+      border: 1px solid #ffe0be;
+      margin-top: 0.5rem;
+    }
 
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-                gap: 15px;
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .card-image {
-                height: 180px;
-            }
-            
-            body {
-                padding: 10px;
-            }
-        }
+    .src-placeholder span {
+      font-weight: bold;
+      color: #cf6f32;
+    }
 
-        @media (max-width: 480px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
+    .footer {
+      margin-top: 3.5rem;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #7f6242;
+      border-top: 1px solid #fad6aa;
+      background: #fffaf2;
+      border-radius: 60px;
+    }
 
-        .load-message {
-            text-align: center;
-            padding: 20px;
-            color: #718096;
-        }
+    .footer strong {
+      background: #ffefdd;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      font-family: monospace;
+    }
 
-        .image-error {
-            background: #f7fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #cbd5e0;
-            font-size: 0.9em;
-            min-height: 220px;
-        }
-    </style>
+    @media (max-width: 550px) {
+      body {
+        padding: 1rem;
+      }
+      .gallery {
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+      .card-info h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎨 50 Atividades Infantis Incríveis</h1>
-            <div class="subtitle">Ideias criativas para entreter, educar e inspirar as crianças</div>
-            <div class="counter">📸 50 imagens educativas e divertidas</div>
-        </header>
+<div class="container">
+  <div class="header">
+    <h1>🎨 50 atividades infantis 🧸</h1>
+    <p>galeria pronta para adicionar imagens</p>
+  </div>
 
-        <div class="gallery" id="gallery">
-            <!-- As 50 imagens serão inseridas aqui via JavaScript para garantir organização e performance -->
-        </div>l
+  <div class="instrucao">
+    📸 <strong>Como usar:</strong> Cada imagem possui a estrutura exata<br>
+    <code>&lt;img src="coloque a link aqui"&gt;</code><br>
+    👉 <strong>Substitua</strong> o texto <code>"coloque a link aqui"</code> pelo endereço da imagem da atividade infantil desejada.<br>
+    ✨ Dica: mantenha os títulos e a organização, são 50 espaços prontos para suas imagens!
+  </div>
 
-        <footer>
-            <p>🌈 Inspire-se com estas 50 atividades infantis | Desenvolvido com carinho para pequenos grandes exploradores</p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">© 2024 - Todas as imagens são de fontes gratuitas para fins educacionais</p>
-        </footer>
+  <!-- GALERIA COM 50 IMAGENS - estrutura 100% sem JavaScript -->
+  <div class="gallery">
+    <!-- Cada card contém EXATAMENTE a tag <img src="coloque a link aqui"> conforme solicitado -->
+    <!-- Atividade 1 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#01</span> 🧩 Criatividade</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
     </div>
+    <!-- Atividade 2 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#02</span> 🖍️ Desenho livre</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 3 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#03</span> 📚 Hora da leitura</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 4 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#04</span> 🧸 Brincadeira de roda</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 5 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#05</span> 🌈 Pintura com guache</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 6 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#06</span> 🎭 Teatro de fantoches</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 7 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#07</span> 🧩 Quebra-cabeça</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 8 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#08</span> 🌿 Explorando a natureza</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 9 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#09</span> 🎨 Colagem criativa</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 10 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#10</span> 🧁 Cozinhando juntos</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 11 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#11</span> 🤸‍♂️ Ginástica lúdica</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 12 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#12</span> 🎵 Música e dança</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 13 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#13</span> 🧠 Jogo da memória</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 14 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#14</span> ✂️ Artesanato reciclável</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 15 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#15</span> 🏕️ Acampamento no quintal</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 16 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#16</span> 🧪 Pequeno cientista</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 17 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#17</span> 🚲 Passeio de bicicleta</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 18 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#18</span> 🪁 Empinar pipa</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 19 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#19</span> 🧱 Blocos de montar</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 20 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#20</span> 🧘‍♀️ Yoga para crianças</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 21 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#21</span> 🎳 Boliche divertido</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 22 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#22</span> 📝 Contação de histórias</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 23 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#23</span> 🐾 Cuidar de animais</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 24 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#24</span> 🧺 Caça ao tesouro</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 25 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#25</span> 🧸 Piquenique no parque</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 26 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#26</span> 🎈 Festa a fantasia</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 27 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#27</span> 🖌️ Pintura com as mãos</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 28 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#28</span> 🌟 Origami fácil</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 29 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#29</span> 🏰 Construção com caixas</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 30 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#30</span> 🎲 Jogo de tabuleiro</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 31 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#31</span> 🌻 Plantar uma sementinha</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 32 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#32</span> 🎤 Karaokê infantil</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 33 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#33</span> 🧵 Máscaras de papel</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 34 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#34</span> 🎯 Alvo com bolinhas</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 35 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#35</span> 🧽 Esponja criativa</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 36 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#36</span> 🚀 Foguete de garrafa</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 37 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#37</span> 🧩 Palavras cruzadas</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 38 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#38</span> 🧸 Dia do brinquedo antigo</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 39 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#39</span> 🌊 Experiência com água</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 40 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#40</span> 🧹 Hora da organização lúdica</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 41 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#41</span> 🎨 Desenho coletivo</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 42 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#42</span> 🐚 Colagem de elementos naturais</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 43 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#43</span> 🎭 Expressão corporal</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 44 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#44</span> 🧶 Fazer pulseirinhas</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 45 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#45</span> 🕹️ Circuito de obstáculos</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 46 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#46</span> 🧸 Massinha de modelar</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 47 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#47</span> 🎶 Instrumentos reciclados</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 48 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#48</span> 📸 Caça às cores</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 49 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#49</span> 🧸 Brinquedos de sucata</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+    <!-- Atividade 50 -->
+    <div class="card">
+      <img src="coloque a link aqui" alt="Atividade infantil - substitua o link">
+      <div class="card-info">
+        <h3><span class="badge-num">#50</span> 🎉 Festa do pijama</h3>
+        <div class="src-placeholder"><span>src:</span> "coloque a link aqui"</div>
+      </div>
+    </div>
+  </div>
 
-    <script>l
-        // Lista completa de 50 URLs de imagens de atividades infantis (todas de fontes gratuitas e confiáveis)
-        const atividadesInfantis = [
-            "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png", // Criança escrevendo (paisagem)
-            "https://picsum.photos/id/100/400/300", // Criança brincando na câmera
-            "https://picsum.photos/id/169/400/300", // Criança ao ar livre
-            "https://picsum.photos/id/15/400/300", // Atividade ao ar livre
-            "https://picsum.photos/id/66/400/300", // Música infantil
-            "https://picsum.photos/id/131/400/300", // Natureza com crianças
-            "https://picsum.photos/id/94/400/300", // Brincadeira com blocos
-            "https://picsum.photos/id/160/400/300", // Pintura artística
-            "https://picsum.photos/id/116/400/300", // Leitura infantil
-            "https://picsum.photos/id/124/400/300", // Atividade criativa
-            "https://picsum.photos/id/127/400/300", // Jogo educativo
-            "https://picsum.photos/id/128/400/300", // Criança desenhando
-            "https://picsum.photos/id/132/400/300", // Brincadeira de faz de conta
-            "https://picsum.photos/id/135/400/300", // Atividade em grupo
-            "https://picsum.photos/id/136/400/300", // Artesanato infantil
-            "https://picsum.photos/id/144/400/300", // Aprendendo brincando
-            "https://picsum.photos/id/145/400/300", // Jogos ao ar livre
-            "https://picsum.photos/id/151/400/300", // Experiência científica
-            "https://picsum.photos/id/155/400/300", // Música e dança
-            "https://picsum.photos/id/157/400/300", // Brincadeira com massinha
-            "https://picsum.photos/id/159/400/300", // Teatro infantil
-            "https://picsum.photos/id/161/400/300", // Atividade de colagem
-            "https://picsum.photos/id/162/400/300", // Jardim infantil
-            "https://picsum.photos/id/163/400/300", // Cozinhando com crianças
-            "https://picsum.photos/id/164/400/300", // Brincadeira tradicional
-            "https://picsum.photos/id/165/400/300", // Esporte infantil
-            "https://picsum.photos/id/166/400/300", // Yoga para crianças
-            "https://picsum.photos/id/167/400/300", // Contação de histórias
-            "https://picsum.photos/id/168/400/300", // Atividade sensorial
-            "https://picsum.photos/id/170/400/300", // Construção com blocos
-            "https://picsum.photos/id/171/400/300", // Pintura com guache
-            "https://picsum.photos/id/172/400/300", // Brincadeira de roda
-            "https://picsum.photos/id/173/400/300", // Atividade matemática lúdica
-            "https://picsum.photos/id/174/400/300", // Desenho livre
-            "https://picsum.photos/id/175/400/300", // Atividade de reciclagem
-            "https://picsum.photos/id/176/400/300", // Brincadeira com água
-            "https://picsum.photos/id/177/400/300", // Oficina de música
-            "https://picsum.photos/id/178/400/300", // Atividade de coordenação motora
-            "https://picsum.photos/id/179/400/300", // Jogo da memória
-            "https://picsum.photos/id/180/400/300", // Atividade ao ar livre
-            "https://picsum.photos/id/181/400/300", // Brincadeira com sombras
-            "https://picsum.photos/id/182/400/300", // Aprendendo letras
-            "https://picsum.photos/id/183/400/300", // Atividade de pular corda
-            "https://picsum.photos/id/184/400/300", // Dança criativa
-            "https://picsum.photos/id/185/400/300", // Horta infantil
-            "https://picsum.photos/id/186/400/300", // Atividade com massinha de modelar
-            "https://picsum.photos/id/187/400/300", // Brincadeira de caça ao tesouro
-            "https://picsum.photos/id/188/400/300", // Atividade de recorte e colagem
-            "https://picsum.photos/id/189/400/300", // Jogos de tabuleiro infantis
-            "https://picsum.photos/id/190/400/300"  // Atividade de equilíbrio
-        ];
-
-        // Nomes das atividades para complementar cada card (educativo e divertido)
-        const nomesAtividades = [
-            "✏️ Escrita Criativa", "📸 Fotografia Divertida", "🌳 Exploração na Natureza", "🚴 Piquenique no Parque", "🎵 Oficina de Música", 
-            "🌻 Jardinagem Infantil", "🧱 Construção com Blocos", "🎨 Pintura com Tintas", "📖 Hora do Conto", "✂️ Artesanato com Papel", 
-            "🧩 Quebra-Cabeça em Grupo", "🖍️ Desenho Livre", "🎭 Teatro de Fantoches", "🤝 Brincadeiras Cooperativas", "🧵 Costura Criativa", 
-            "🔢 Matemática Divertida", "⚽ Esportes ao Ar Livre", "🧪 Experimentos Científicos", "💃 Dança das Cadeiras", "🧸 Massinha de Modelar", 
-            "🎪 Circo em Casa", "📒 Colagem Criativa", "🌱 Plantando Sementes", "🍪 Cozinhando Juntos", "🪁 Pipa Colorida", 
-            "🏀 Basquete Divertido", "🧘‍♀️ Yoga para Crianças", "📚 Contaçãlo de Histórias", "🔍 Caixa Sensorial", "🏰 Castelo de Papelão", 
-            "🎨 Aquarela Mágica", "🔄 Brincadeiras de Roda", "🧮 Números Divertidos", "🖌️ Desenho Coletivo", "♻️ Arte com Recicláveis", 
-            "💧 Brincadeiras com Água", "🥁 Instrumentos Musicais", "🤹‍♀️ Equilíbrio e Coordenação", "🃏 Jogo da Memória", "🌲 Caminhada Ecológica", 
-            "👥 Teatro de Sombras", "🔤 Alfabeto Lúdico", "🪢 Pular Corda", "💃 Dança Criativa", "🥕 Horta Orgânica", 
-            "🎨 Modelagem em Argila", "🗺️ Caça ao Tesouro", "📰 Recorte e Colagem", "🎲 Jogos de Tabuleiro", "⚖️ Circuito de Equilíbrio"
-        ];
-
-        const gallery = document.getElementById('gallery');
-        
-        // Função para criar os cards com imagens e tratamento de erro
-        function criarGaleria() {
-            gallery.innerHTML = '';
-            
-            for (let i = 0; i < atividadesInfantis.length; i++) {
-                const card = document.createElement('div');
-                card.className = 'card';
-                
-                const badge = document.createElement('div');
-                badge.className = 'badge';
-                badge.textContent = `Atividade ${i+1}`;
-                
-                const img = document.createElement('img');
-                img.className = 'card-image';
-                img.src = atividadesInfantis[i];
-                img.alt = nomesAtividades[i];
-                img.loading = 'lazy';
-                
-                // Tratamento de erro para imagens que não carregarem
-                img.onerror = function() {
-                    this.style.display = 'none';
-                    const errorDiv = document.createElement('div');
-                    errorDiv.className = 'image-error';
-                    errorDiv.innerHTML = `🖼️ <br> Imagem ilustrativa<br>${nomesAtividades[i]}`;
-                    card.insertBefore(errorDiv, card.firstChild);
-                };
-                
-                const cardContent = document.createElement('div');
-                cardContent.className = 'card-content';
-                
-                const title = document.createElement('div');
-                title.className = 'activity-title';
-                title.textContent = nomesAtividades[i];
-                
-                const number = document.createElement('div');
-                number.className = 'activity-number';
-                number.textContent = `#${String(i+1).padStart(2, '0')}`;
-                
-                cardContent.appendChild(title);
-                cardContent.appendChild(number);
-                
-                card.appendChild(badge);
-                card.appendChild(img);
-                card.appendChild(cardContent);
-                
-                // Adicionar efeito de clique para interação divertida
-                card.addEventListener('click', function() {
-                    this.style.transform = 'scale(0.98)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 200);
-                    // Pequena interação para mostrar o nome da atividade no console (didático)
-                    console.log(`Atividade selecionada: ${nomesAtividades[i]}`);
-                });
-                
-                gallery.appendChild(card);
-            }
-            
-            // Adicionar contador no console para confirmar as 50 imagens
-            console.log(`✅ Galeria carregada com sucesso! Total: ${atividadesInfantis.length} atividades infantis.`);
-        }
-        
-        // Inicializar a galeria quando a página carregar
-        window.addEventListener('DOMContentLoaded', criarGaleria);
-        
-        // Adicionar um pequeno efeito de animação de entrada para os cards
-        const style = document.createElement('style');
-        style.textContent = `
-            .card {
-                opacity: 0;
-                transform: translateY(20px);
-                animation: fadeInUp 0.5s ease forwards;
-            }
-            
-            @keyframes fadeInUp {
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            
-            .card:nth-child(1) { animation-delay: 0.05s; }
-            .card:nth-child(2) { animation-delay: 0.08s; }
-            .card:nth-child(3) { animation-delay: 0.11s; }
-            .card:nth-child(4) { animation-delay: 0.14s; }
-            .card:nth-child(5) { animation-delay: 0.17s; }
-            .card:nth-child(6) { animation-delay: 0.20s; }
-            .card:nth-child(7) { animation-delay: 0.23s; }
-            .card:nth-child(8) { animation-delay: 0.26s; }
-            .card:nth-child(9) { animation-delay: 0.29s; }
-            .card:nth-child(10) { animation-delay: 0.32s; }
-            .card:nth-child(11) { animation-delay: 0.35s; }
-            .card:nth-child(12) { animation-delay: 0.38s; }
-            .card:nth-child(13) { animation-delay: 0.41s; }
-            .card:nth-child(14) { animation-delay: 0.44s; }
-            .card:nth-child(15) { animation-delay: 0.47s; }
-            .card:nth-child(16) { animation-delay: 0.50s; }
-            .card:nth-child(17) { animation-delay: 0.53s; }
-            .card:nth-child(18) { animation-delay: 0.56s; }
-            .card:nth-child(19) { animation-delay: 0.59s; }
-            .card:nth-child(20) { animation-delay: 0.62s; }
-            .card:nth-child(21) { animation-delay: 0.65s; }
-            .card:nth-child(22) { animation-delay: 0.68s; }
-            .card:nth-child(23) { animation-delay: 0.71s; }
-            .card:nth-child(24) { animation-delay: 0.74s; }
-            .card:nth-child(25) { animation-delay: 0.77s; }
-            .card:nth-child(26) { animation-delay: 0.80s; }
-            .card:nth-child(27) { animation-delay: 0.83s; }
-            .card:nth-child(28) { animation-delay: 0.86s; }
-            .card:nth-child(29) { animation-delay: 0.89s; }
-            .card:nth-child(30) { animation-delay: 0.92s; }
-            .card:nth-child(31) { animation-delay: 0.95s; }
-            .card:nth-child(32) { animation-delay: 0.98s; }
-            .card:nth-child(33) { animation-delay: 1.01s; }
-            .card:nth-child(34) { animation-delay: 1.04s; }
-            .card:nth-child(35) { animation-delay: 1.07s; }
-            .card:nth-child(36) { animation-delay: 1.10s; }
-            .card:nth-child(37) { animation-delay: 1.13s; }
-            .card:nth-child(38) { animation-delay: 1.16s; }
-            .card:nth-child(39) { animation-delay: 1.19s; }
-            .card:nth-child(40) { animation-delay: 1.22s; }
-            .card:nth-child(41) { animation-delay: 1.25s; }
-            .card:nth-child(42) { animation-delay: 1.28s; }
-            .card:nth-child(43) { animation-delay: 1.31s; }
-            .card:nth-child(44) { animation-delay: 1.34s; }
-            .card:nth-child(45) { animation-delay: 1.37s; }
-            .card:nth-child(46) { animation-delay: 1.40s; }
-            .card:nth-child(47) { animation-delay: 1.43s; }
-            .card:nth-child(48) { animation-delay: 1.46s; }
-            .card:nth-child(49) { animation-delay: 1.49s; }
-            .card:nth-child(50) { animation-delay: 1.52s; }
-        `;
-        document.head.appendChild(style);
-    </script>
+  <div class="footer">
+    🧸 <strong>50 imagens prontas</strong> — substitua o atributo <strong>src="coloque a link aqui"</strong> pelos links reais das atividades infantis.<br>
+    ✅ estrutura exata: <code>&lt;img src="coloque a link aqui"&gt;</code> em cada card. Sem JavaScript, apenas HTML + CSS.
+  </div>
+</div>
 </body>
-</html>l
+</html>
